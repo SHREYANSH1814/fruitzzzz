@@ -1,0 +1,13 @@
+const {
+  customregistration,
+  vendorregistration,
+} = require("../controllers/control1");
+// const { authenticate } = require("./controllers/controller3");
+const express = require("express");
+const regrouter = express.Router();
+regrouter.post("/customerregistration", customregistration);
+regrouter.post("/vendorregistration", vendorregistration);
+
+module.exports = {
+  regrouter,
+};

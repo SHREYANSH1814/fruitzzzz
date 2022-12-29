@@ -1,0 +1,18 @@
+const {
+  offerfruits,
+  pastorder,
+  currentorder,
+  orderplaced,    
+  orderform,
+} = require("../controllers/control2");
+const express = require("express");
+const cusrouter = express.Router();
+cusrouter.get("/customer/offerfruit", offerfruits);
+cusrouter.get("/customer/pastorder", pastorder);
+cusrouter.get("/customer/currentorder", currentorder);
+cusrouter.get("/customer/order?id", orderform);
+cusrouter.post("/customer/placedorder", orderplaced);
+
+module.exports = {
+  cusrouter
+};
